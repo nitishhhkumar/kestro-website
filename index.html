@@ -5,35 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Kestro is a non-profit organisation dedicated to empowering communities, promoting inclusive development, and creating sustainable social impact." />
     <title>Kestro | Empowering Communities for Sustainable Change</title>
-    
+   
     <!-- Preconnect to Google Fonts for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+   
     <style>
         :root {
-            --primary:   #1e6f64;
+            --primary: #1e6f64;
             --primary-dark: #185955;
-            --accent:    #0f766e;
+            --accent: #0f766e;
             --accent-dark: #0c5f59;
             --background: #f8fafc;
-            --surface:   #ffffff;
-            --text:      #0f172a;
+            --surface: #ffffff;
+            --text: #0f172a;
             --text-muted:#475569;
-            --border:    #e2e8f0;
+            --border: #e2e8f0;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
             --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
-            --radius:    12px;
+            --radius: 12px;
             --transition: all 0.22s ease;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: 'Inter', system-ui, sans-serif;
             background: var(--background);
@@ -41,12 +39,10 @@
             line-height: 1.6;
             font-size: 1.05rem;
         }
-
         .container {
             width: min(100% - 2.5rem, 1180px);
             margin-inline: auto;
         }
-
         /* Header & Navigation */
         header {
             background: var(--surface);
@@ -56,28 +52,24 @@
             z-index: 100;
             box-shadow: var(--shadow-sm);
         }
-
         .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1.25rem 0;
         }
-
         .logo {
             font-size: 1.75rem;
             font-weight: 700;
             color: var(--primary);
             letter-spacing: -0.02em;
         }
-
         /* Hero */
         .hero {
             background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
             padding: 6rem 0 5rem;
             text-align: center;
         }
-
         .hero h1 {
             font-size: clamp(2.5rem, 6vw, 4.2rem);
             font-weight: 700;
@@ -85,7 +77,6 @@
             margin-bottom: 1.5rem;
             color: var(--text);
         }
-
         .hero p {
             font-size: clamp(1.15rem, 3vw, 1.35rem);
             color: var(--text-muted);
@@ -93,7 +84,6 @@
             margin: 0 auto 2.5rem;
             line-height: 1.7;
         }
-
         .btn {
             display: inline-block;
             padding: 0.9rem 2.1rem;
@@ -105,24 +95,20 @@
             transition: var(--transition);
             box-shadow: 0 2px 6px rgba(15,118,110,0.2);
         }
-
         .btn:hover,
         .btn:focus-visible {
             background: var(--accent-dark);
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(15,118,110,0.3);
         }
-
         .btn:focus {
             outline: 3px solid var(--primary);
             outline-offset: 3px;
         }
-
         /* Main Content */
         main {
             padding: 5rem 0;
         }
-
         .section-title {
             text-align: center;
             font-size: 2.25rem;
@@ -130,13 +116,11 @@
             margin-bottom: 3.5rem;
             color: var(--primary);
         }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         .card {
             background: var(--surface);
             border-radius: var(--radius);
@@ -145,24 +129,68 @@
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
         }
-
         .card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-md);
         }
-
         .card h2 {
             font-size: 1.45rem;
             color: var(--primary);
             margin-bottom: 1rem;
             font-weight: 600;
         }
-
         .card p {
             color: var(--text-muted);
             line-height: 1.75;
         }
-
+        /* Form specific styles */
+        .form-card {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30,111,100,0.15);
+        }
+        input:required:invalid:focus {
+            border-color: #e53e3e;
+        }
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
         /* CTA */
         .cta-section {
             background: var(--primary);
@@ -170,30 +198,25 @@
             text-align: center;
             padding: 6rem 0;
         }
-
         .cta-section h2 {
             font-size: 2.6rem;
             margin-bottom: 1.25rem;
         }
-
         .cta-section p {
             font-size: 1.25rem;
             max-width: 620px;
             margin: 0 auto 2.5rem;
             opacity: 0.95;
         }
-
         .cta-section .btn {
             background: white;
             color: var(--primary);
             font-size: 1.15rem;
             padding: 1rem 2.5rem;
         }
-
         .cta-section .btn:hover {
             background: #f8fafc;
         }
-
         /* Footer */
         footer {
             background: var(--surface);
@@ -203,24 +226,20 @@
             font-size: 0.95rem;
             text-align: center;
         }
-
         footer a {
             color: var(--primary);
             text-decoration: none;
         }
-
         footer a:hover,
         footer a:focus {
             text-decoration: underline;
         }
-
         /* Focus styles for accessibility */
         :focus-visible {
             outline: 3px solid var(--primary);
             outline-offset: 3px;
             border-radius: 4px;
         }
-
         /* Responsive adjustments */
         @media (max-width: 640px) {
             .hero { padding: 4.5rem 0 3.5rem; }
@@ -230,26 +249,23 @@
     </style>
 </head>
 <body>
-
     <header>
         <div class="container nav">
             <div class="logo">Kestro</div>
             <!-- You can add navigation links later: About, Projects, Contact, Donate -->
         </div>
     </header>
-
     <section class="hero" aria-labelledby="hero-title">
         <div class="container">
             <h1 id="hero-title">Building Sustainable Change Together</h1>
             <p>
-                Kestro is a non-profit organisation committed to empowering communities, 
-                supporting inclusive development, and creating lasting social impact through 
+                Kestro is a non-profit organisation committed to empowering communities,
+                supporting inclusive development, and creating lasting social impact through
                 transparent, people-centered initiatives.
             </p>
-            <a href="mailto:contact@kestro.org" class="btn">Get Involved →</a>
+            <a href="#contact" class="btn">Get in Touch →</a>
         </div>
     </section>
-
     <main>
         <div class="container">
             <h2 class="section-title">What Drives Us</h2>
@@ -257,24 +273,22 @@
                 <article class="card">
                     <h2>Who We Are</h2>
                     <p>
-                        We collaborate closely with local communities and strategic partners 
-                        to tackle pressing social challenges with responsibility, transparency, 
+                        We collaborate closely with local communities and strategic partners
+                        to tackle pressing social challenges with responsibility, transparency,
                         and genuine care for the people we serve.
                     </p>
                 </article>
-
                 <article class="card">
                     <h2>Our Mission</h2>
                     <p>
-                        To drive positive, enduring change by advancing education, health & wellbeing, 
+                        To drive positive, enduring change by advancing education, health & wellbeing,
                         environmental sustainability, and resilient community solutions.
                     </p>
                 </article>
-
                 <article class="card">
                     <h2>Our Core Values</h2>
                     <p>
-                        Integrity • Accountability • Collaboration • Respect • Inclusion — 
+                        Integrity • Accountability • Collaboration • Respect • Inclusion —
                         these principles shape every decision and action we take.
                     </p>
                 </article>
@@ -282,29 +296,131 @@
         </div>
     </main>
 
+    <!-- Contact Us / Web-to-Lead Form Section -->
+    <section id="contact" class="container" style="padding: 5rem 0;">
+        <h2 class="section-title">Contact Us</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: var(--text-muted);">
+            We'd love to hear from you! Whether you're interested in partnering, volunteering, donating, or just want to learn more about our work, drop us a message.
+        </p>
+        <div class="card form-card">
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgK00000AgQYD" method="POST">
+                <input type="hidden" name="oid" value="00DgK00000AgQYD">
+                <input type="hidden" name="retURL" value="http://"> <!-- Update this to your thank-you page URL -->
+
+                <div class="form-group">
+                    <label for="first_name">First Name *</label>
+                    <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Last Name *</label>
+                    <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input id="email" maxlength="80" name="email" size="20" type="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company / Organization</label>
+                    <input id="company" maxlength="40" name="company" size="20" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input id="city" maxlength="40" name="city" size="20" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label for="country_code">Country *</label>
+                    <select id="country_code" name="country_code" required>
+                        <option value="">-- Select Country --</option>
+                        <option value="AF">Afghanistan</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AD">Andorra</option>
+                        <!-- Add more as needed; here's a few common ones for brevity -->
+                        <option value="AR">Argentina</option>
+                        <option value="AU">Australia</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BR">Brazil</option>
+                        <option value="CA">Canada</option>
+                        <option value="CN">China</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="IT">Italy</option>
+                        <option value="JP">Japan</option>
+                        <option value="MX">Mexico</option>
+                        <option value="NP">Nepal</option>
+                        <option value="PK">Pakistan</option>
+                        <option value="RU">Russia</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <!-- You can expand this list fully from your original options if desired -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="state_code">State / Province</label>
+                    <select id="state_code" name="state_code">
+                        <option value="">-- Select State --</option>
+                        <!-- Keeping your original codes; in production consider JS to filter by country -->
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="AR">Arunachal Pradesh</option>
+                        <option value="AS">Assam</option>
+                        <option value="BR">Bihar</option>
+                        <!-- Example: add more relevant ones, especially for India since location is Patna, Bihar -->
+                        <option value="GJ">Gujarat</option>
+                        <option value="HR">Haryana</option>
+                        <option value="KA">Karnataka</option>
+                        <option value="KL">Kerala</option>
+                        <option value="MH">Maharashtra</option>
+                        <option value="MP">Madhya Pradesh</option>
+                        <option value="OR">Odisha</option>
+                        <option value="PB">Punjab</option>
+                        <option value="RJ">Rajasthan</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="TG">Telangana</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="WB">West Bengal</option>
+                        <!-- Add US states, etc., if global audience expected -->
+                        <option value="CA">California</option>
+                        <option value="NY">New York</option>
+                        <option value="TX">Texas</option>
+                        <!-- ... -->
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
     <section class="cta-section" aria-labelledby="cta-title">
         <div class="container">
             <h2 id="cta-title">Become Part of the Change</h2>
             <p>
-                We warmly welcome volunteers, partners, donors, and advocates who share our vision 
+                We warmly welcome volunteers, partners, donors, and advocates who share our vision
                 of a more equitable and sustainable world.
             </p>
-            <a href="mailto:contact@kestro.org" class="btn">Contact Us Today</a>
+            <a href="#contact" class="btn">Contact Us Today</a>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <p>© 2026 Kestro — All rights reserved.</p>
             <p>Registered Non-Profit Organisation | <a href="mailto:contact@kestro.org">contact@kestro.org</a></p>
         </div>
     </footer>
-    
+   
     <script type='text/javascript'>
         function initEmbeddedMessaging() {
             try {
-                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
+                embeddedservice_bootstrap.settings.language = 'en_US';
                 embeddedservice_bootstrap.init(
                     '00DgK00000AgQYD',
                     'Github_Messaging_Setting',
@@ -319,6 +435,5 @@
         };
     </script>
     <script type='text/javascript' src='https://orgfarm-7b5ef26f62-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1770238843451/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
 </body>
 </html>
